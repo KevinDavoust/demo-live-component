@@ -1,0 +1,11 @@
+{% if app.user %}
+    <div{{ attributes }}>
+        <button data-action="live#action" data-action-name="toggle">
+            {% if app.user.articles.contains(this.article) %}
+                enlever des favoris
+            {% else %}
+                ajouter aux favoris
+            {% endif %}
+        </button>
+    </div>
+{% endif %}
